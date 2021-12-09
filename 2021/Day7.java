@@ -39,10 +39,10 @@ public class Day7 {
             int current = (mn+mx)/2;  
             int sumPrev = 0;          
             int sumNext = 0;
-            for(int i = 0; i < pos.length; i++){
-                sum += part2 ? Math.abs(pos[i]-current)*(Math.abs(pos[i]-current)+1)/2 : Math.abs(pos[i]-current);
-                sumPrev += part2 ? Math.abs(pos[i]-(current-1))*(Math.abs(pos[i]-(current-1))+1)/2 : Math.abs(pos[i]-(current-1));
-                sumNext += part2 ? Math.abs(pos[i]-(current+1))*(Math.abs(pos[i]-(current+1))+1)/2 : Math.abs(pos[i]-(current+1));
+            for(int p: pos){
+                sum += part2 ? Math.abs(p-current)*(Math.abs(p-current)+1)/2 : Math.abs(p-current);
+                sumPrev += part2 ? Math.abs(p-(current-1))*(Math.abs(p-(current-1))+1)/2 : Math.abs(p-(current-1));
+                sumNext += part2 ? Math.abs(p-(current+1))*(Math.abs(p-(current+1))+1)/2 : Math.abs(p-(current+1));
             }
             mn = sum < sumPrev ? current : mn;
             mx = sum < sumNext ? current : mx;
