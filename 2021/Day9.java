@@ -10,7 +10,7 @@ public class Day9 {
     static int xlen;
     static int ylen;
     static int p1;
-    static ArrayList<Integer> p2 = new ArrayList<>();;
+    static ArrayList<Integer> p2 = new ArrayList<>();
 	public static void main(String[] args) {
 	   	try {
     		File myObj = new File("input9.txt");
