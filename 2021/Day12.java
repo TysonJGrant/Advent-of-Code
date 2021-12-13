@@ -29,7 +29,7 @@ public class Day12 {
     private static void populateCaves(String s1, String s2){
         if(!s2.equals("start") && !s1.equals("end")){
             if(caves.containsKey(s1))
-                caves.get(s1).add(s2);      //Because not primitive, should add the value to the actual HashSet
+                caves.get(s1).add(s2);     
             else{
                 HashSet<String> temp = new HashSet<>();
                 temp.add(s2);
